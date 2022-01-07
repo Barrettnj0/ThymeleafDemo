@@ -12,8 +12,9 @@ public class PersonController {
     @Autowired
     private PersonService personService;
 
-    @GetMapping("/example")
+    @GetMapping("/people")
     String getPeopleExample(Model model) {
-        return personService.getPeopleExample(model);
+        personService.getPeopleExample(model);
+        return "people";
     }
 }

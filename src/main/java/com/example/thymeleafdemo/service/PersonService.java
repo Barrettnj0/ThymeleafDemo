@@ -14,13 +14,8 @@ public class PersonService {
     @Autowired
     private PersonRepository personRepository;
 
-    public String getPeopleExample(Model model) {
-        model.addAttribute("something", "this is coming from the controller");
-        model.addAttribute("people", Arrays.asList(
-                new Person(1,"John", 20),
-                new Person(2,"Sarah", 22),
-                new Person(3,"Simon", 23)
-        ));
-        return "people";
+    public void getPeopleExample(Model model) {
+        model.addAttribute("something", "List of People:");
+        model.addAttribute("people", personRepository.findAll());
     }
 }
