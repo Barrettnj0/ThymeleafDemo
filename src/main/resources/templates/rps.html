@@ -26,6 +26,28 @@
         <button type="submit">Shoot!</button>
     </form>
 </div>
+<div id='wrapper' style='text-align: center;'>
+    <div style='display: inline-block; vertical-align: top;'>
+        <span>Wins: </span><span th:text="${winCount}"</span>
+    </div>
+    <div style='display: inline-block; vertical-align: top;'>
+        <span> &emsp; </span>
+    </div>
+    <div style='display: inline-block; vertical-align: top;'>
+        <span>Losses: </span><span th:text="${lossCount}"</span><br/>
+    </div>
+    <div style='display: inline-block; vertical-align: top;'>
+        <span> &emsp; </span>
+    </div>
+    <div style='display: inline-block; vertical-align: top;'>
+            <span>Draws: </span><span th:text=" ${drawCount}"</span><br/>
+    </div>
+</div>
+<div id='wrapper' style='text-align: center;'>
+    <div style='display: inline-block; vertical-align: top;'>
+        <span>Win Ratio: </span><span th:text="${winRatio}"</span>
+    </div>
+</div>
 
 </body>
 </html>
